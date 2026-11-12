@@ -198,3 +198,8 @@ h1, h2, h3, p, figure, dl, dd, blockquote { margin: 0; }
 
 /* inline code in case studies */
 .case-main code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .88em; padding: 1px 5px; border-radius: 3px; background: rgba(14, 42, 71, .08); }
+
+/* home: avatar beside the hero headline, only where the headline leaves room */
+.hero-avatar { display: none; }
+/* where the avatar shows, it replaces the photo pill so the hero has one face, not two */
+@media (min-width: 1180px) { .hero-avatar { display: block; } .hero-pill { display: none; } }

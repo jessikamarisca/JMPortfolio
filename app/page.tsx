@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { NaplesClock, WorkList, type WorkRow } from "@/components/home-client";
+import { AvatarFollow } from "@/components/avatar-follow";
 import { PhoneVideo } from "@/components/phone-video";
 import { CONTACT, ContactLinks, SiteHeader } from "@/components/site";
 
@@ -72,11 +73,15 @@ export default function Home() {
       <SiteHeader />
       <main id="main">
         <section className="wrap" style={{ paddingBlock: "clamp(40px, 7vw, 96px) clamp(48px, 6vw, 80px)", display: "flex", flexDirection: "column", gap: 48 }}>
-          <h1 className="h-display" style={{ fontSize: "clamp(48px, 8.6vw, 136px)" }}>
+          <div style={{ position: "relative" }}>
+          <div className="hero-avatar" style={{ position: "absolute", right: 0, bottom: -48 }}>
+            <AvatarFollow size="clamp(220px, 21vw, 320px)" />
+          </div>
+          <h1 className="h-display" style={{ fontSize: "clamp(36px, 8.6vw, 136px)" }}>
             <span className="line"><span>I design products</span></span>
             <span className="line l2">
               <span>
-                <Image src="/images/home/me-pill.jpg" alt="Jessika smiling" width={580} height={302} priority sizes="220px" style={{ height: "0.78em", width: "1.5em", objectFit: "cover", borderRadius: 999 }} />
+                <Image className="hero-pill" src="/images/home/me-pill.jpg" alt="Jessika smiling" width={580} height={302} priority sizes="220px" style={{ height: "0.78em", width: "1.5em", objectFit: "cover", borderRadius: 999 }} />
                 and <span className="serif mark">build</span> them
               </span>
             </span>
@@ -92,6 +97,7 @@ export default function Home() {
               </span>
             </span>
           </h1>
+          </div>
           <div className="fade-in" style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end", gap: "24px 64px", paddingTop: 24, borderTop: "2px solid var(--ink)" }}>
             <p style={{ flex: "1 1 420px", maxWidth: "52ch", fontSize: "clamp(18px, 1.4vw, 20px)", lineHeight: 1.5 }}>
               Peruvian product designer. I started in graphic design for fashion and e-commerce, did my UX master’s at Elisava in Barcelona, and I’m now at the Apple Developer Academy in Naples, learning to build everything I design.
