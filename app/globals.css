@@ -35,7 +35,7 @@ h1, h2, h3, p, figure, dl, dd, blockquote { margin: 0; }
 .skip { position: absolute; left: -9999px; top: 8px; z-index: 10; padding: 10px 14px; background: var(--ink); color: var(--paper); font-weight: 700; }
 .skip:focus { left: 8px; }
 
-.wrap { max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
+.wrap { width: 100%; max-width: var(--max); margin: 0 auto; padding-inline: var(--gutter); }
 .serif { font-family: var(--serif); font-style: italic; font-weight: 500; }
 .mark { background: var(--accent); padding: 0 .12em; border-radius: 4px; }
 
